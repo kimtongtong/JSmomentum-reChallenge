@@ -11,12 +11,12 @@
   <h1 id="clock">00:00:00</h1>
 
 
-  <form id="login-form">
+  <form id="login-form" class="hidden"> <!--login화면-->
   <input type="text" placeholder="Write your name!" required maxlength="15">
   <input type="submit" value="Login">
   </form>
+  <h1 id="greeting"></h1> <!--login을 했을때 나타나는 화면-->
 
-  <h1 id="greeting" class="hidden"></h1>
   <script src="src/clock.js"></script>
   <script src="src/greeting.js"></script>
 </body>
