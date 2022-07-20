@@ -6,7 +6,7 @@ function clockEvent () {
     const hours = String(date.getHours()).padStart(2, "0"); //padStart(문자 길이, 넣을 문자(숫자, 문자))//
     const minutes = String(date.getMinutes()).padStart(2, "0");
     const seconds = String(date.getSeconds()).padStart(2, "0"); 
-    //padStart는 문자열에서 추가를 해주기 때문에 시간 함수new Date함수는 숫자로 출력 되기 떄문에 String으로 변수값을 감싸 "문자"로 변경해주어야 한다.//
+    //padStart는 문자열에서 추가를 하ㄴ다. 시간 함수new Date함수는 숫자로 출력 되기 떄문에 String으로 변수값을 감싸 "문자"로 변경해주어야 한다.//
     clock.innerText = `${hours} : ${minutes} : ${seconds}`;
 }
 
