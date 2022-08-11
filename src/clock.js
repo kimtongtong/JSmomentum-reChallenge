@@ -14,3 +14,21 @@ clockEvent();
 //이벤트를 한번 더 실행 하는 것으로 html에서는 00으로 되어있는 새로고침 할떄마다 00으로 나오지 않게 미리 실행할 수 있도록 함수를 한번 실행한다.//
 setInterval(clockEvent, 1000);
 //setInterval을 사용해서 (함수, 시간ms 단위)를 입력하여 함수를 몇ms 단위로 실행 할 것인지 설정한다.//
+
+
+//생일 디데이 만들기
+
+const birthday = document.querySelector("#d-day");
+
+function myBirth() {
+  const myday = new Date("2022-12-30");
+  const today = new Date();
+  const minusDay = myday - today;
+    const birDay = Math.floor(minusDay / (1000*60*60*24));
+    const birHour = Math.floor((minusDay / (1000*60*60)) % 24);
+    const birMinute = Math.floor((minusDay / (1000*60)) % 60);
+    const birSecond = Math.floor(minusDay / 1000 % 60);
+    birthday.innerText = `${birDay}일 ${birHour}시간 ${birMinute}분 ${birSecond}초`;
+}
+myBirth();
+setInterval(myBirth, 1000);
